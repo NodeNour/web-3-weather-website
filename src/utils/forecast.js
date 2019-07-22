@@ -12,7 +12,9 @@ const forecast = (latitude,longitude,callback) => {
         } else {
             callback(undefined, {
                 temperature: Math.round((body.currently.temperature - 32) *(5/9)),
-                rainProb: body.currently.precipProbability*100
+                rainProb: body.currently.precipProbability*100,
+                tempHigh: Math.round((body.daily.data[0].temperatureHigh - 32) *(5/9)),
+                tempLow: Math.round((body.daily.data[0].temperatureLow - 32) *(5/9))
             })
         }
     })

@@ -22,7 +22,7 @@ weatherForm.addEventListener('submit', (event) => {
         } else {
             console.log(data.forecast)
             console.log(data.location)
-            messageOne.textContent = 'It is currently ' + data.forecast.temperature + '°C with a ' + data.forecast.rainProb + '% chance of raining'
+            messageOne.textContent = 'It is currently ' + data.forecast.temperature + '°C with a ' + data.forecast.rainProb + '% chance of raining. The high is: ' + data.forecast.tempHigh + '°C The low is: ' + data.forecast.tempLow +'°C.'
             messageTwo.textContent = data.location
         }
     })
